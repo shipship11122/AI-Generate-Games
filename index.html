@@ -2,26 +2,40 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title></title>
+<title>You Got Rickrolled!</title> <!-- 改成老外熟悉的Rickroll标题 -->
 <style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
   body {
+    background: #000;
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    margin: 0;
-    background: #000;
   }
-  .text {
-    font-size: 120px;
-    font-weight: bold;
-    background: linear-gradient(90deg, red, orange, yellow, green, blue, purple);
-    -webkit-background-clip: text;
-    color: transparent;
+  .video-container {
+    position: relative;
+    width: 90%;
+    max-width: 1200px; /* 加宽视频，适配老外常用的大屏 */
+  }
+  .video-container iframe {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    border: none;
   }
 </style>
 </head>
 <body>
-  <div class="text">你被骗了</div>
+  <div class="video-container">
+    <!-- autoplay=1 自动播放，mute=0 不静音（老外要听音效才够味） -->
+    <iframe 
+      src="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1&mute=0" 
+      allow="autoplay; encrypted-media; fullscreen" 
+      allowfullscreen>
+    </iframe>
+  </div>
 </body>
 </html>
